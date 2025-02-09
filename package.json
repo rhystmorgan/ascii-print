@@ -1,0 +1,25 @@
+{
+  "name": "ascii-print",
+  "version": "1.0.0",
+  "description": "Print colourful avatars from hex strings",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "print": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhystmorgan/ascii-print.git"
+  },
+  "author": "rhys morgan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhystmorgan/ascii-print/issues"
+  },
+  "homepage": "https://github.com/rhystmorgan/ascii-print#readme",
+  "dependencies": {
+    "@vechain/sdk-network": "^1.0.0-rc.6",
+    "chalk": "^5.4.1"
+  }
+}
