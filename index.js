@@ -5,18 +5,18 @@ export async function main() {
   const thor = ThorClient.at("https://testnet.vechain.org");
   
   const genesis = await thor.blocks.getBlockExpanded(0);
-  const best = await thor.blocks.getBestBlockExpanded();
-  const max = best.number
+  // const best = await thor.blocks.getBestBlockExpanded();
+  // const max = best.number
   
-  const qty = 10
+  // const qty = 10
   printExpandedBlock(genesis)
 
-  for (let i = 0; i < qty; i++) {
-    const int = Math.floor(Math.random() * max)
-    const block = await thor.blocks.getBlockExpanded(int);
-    printExpandedBlock(block)
-    console.log(``)
-  }
+  // for (let i = 0; i < qty; i++) {
+  //   const int = Math.floor(Math.random() * max)
+  //   const block = await thor.blocks.getBlockExpanded(int);
+  //   printExpandedBlock(block)
+  //   console.log(``)
+  // }
   
 }
 

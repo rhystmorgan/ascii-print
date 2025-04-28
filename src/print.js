@@ -12,7 +12,17 @@ export function printExpandedBlock(block) {
   const blockSize = block.size
   const blockSigner = block.signer
   
-  const blockData = ['Block Number: ', blockNo, 'Block ID: ', blockId, 'Timestamp: ', blockTimestamp, 'Transactions: ', blockTxs, 'Gas Used: ', blockGas, 'Block Size: ', blockSize, 'Beneficiary: ', blockBeneficiary, 'Signer: ', blockSigner]
+  const blockData = [
+    'Block Number: ', blockNo, 
+    'Block ID: ', blockId, 
+    'Timestamp: ', blockTimestamp, 
+    'Transactions: ', blockTxs, 
+    'Gas Used: ', blockGas,
+    'Block Size: ', blockSize, 
+    'Beneficiary: ', blockBeneficiary, 
+    'Signer: ', blockSigner
+  ]
+
   const colourScheme = makeColourScheme(block.id.slice(2,66))
   
   const mapped = makeMappedBlock(block.id.slice(2,66), colourScheme)

@@ -12,5 +12,6 @@ export function listToLines(list, blockData, colourScheme) {
   if (line.length === 0) {
     return []
   }
+
   return [printLine(line, [blockData[0], blockData[1]], colourScheme), ...listToLines(list.slice(8), blockData.slice(2), colourScheme)]
 }

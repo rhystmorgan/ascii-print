@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "print": "node index.js"
+    "print": "node index.js",
+    "transactions": "node src/transactions.js",
+    "wallet": "node src/wallet.js",
+    "subscribe": "node src/subscribe.js"
   },
   "repository": {
     "type": "git",
