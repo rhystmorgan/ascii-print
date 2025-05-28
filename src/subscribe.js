@@ -5,38 +5,24 @@ import { printExpandedBlock } from './print.js'
 export async function subscribe() {
   // The URL for subscribing to the block
   const wsURL = subscriptions.getBlockSubscriptionUrl(TESTNET_URL);
-  
+
   // Any websocket library can be used to connect to the websocket
   const ws = new WebSocket(wsURL);
-  
-  // Simple websocket event handlers
-  
+
   // Error handling
   ws.on('error', console.error);
-  
+
   // Connection opened
   ws.on('open', () => {
-      console.log('connected');
+    console.log('connected');
   });
-  
-  // Connection closed
-  // ws.on('close', () => {
-  //     console.log('disconnected');
-  // });
-  
+
   // Message received
   ws.on('message', (data) => {
     const block = JSON.parse(data)
-    // console.log(block)
 
     printExpandedBlock(block)
-      // console.log('received: %s', data);
   });
-  
-  // Close the connection to the websocket
-  // ws.close();
-
-  
 }
 
 subscribe()
